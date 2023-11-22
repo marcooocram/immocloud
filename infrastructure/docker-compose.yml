@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  applicants-mongodb:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./db/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./db/applicants-mongodb.yaml:/etc/mongod.conf:ro
+    environment:
+      MONGO_INITDB_DATABASE: applicants-mongodb

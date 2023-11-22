@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: applicant-service
+  data:
+    mongodb:
+      database: applicants-mongodb
+      port: 27017
+      host: localhost
+
+server:
+  port: 8102
